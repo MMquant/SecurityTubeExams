@@ -1,3 +1,8 @@
+; File: bindshell.nasm
+; Author: Petr Javorik
+; Size: 149 bytes
+; 8 byte password
+
 global _start
 
 section .text
