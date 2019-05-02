@@ -23,7 +23,7 @@ main()
     char *heapMemory;
     heapMemory = malloc(300);
 
-    // this 2 lines inserts 2x EGG strings to binary [stack] section
+    // these 2 lines insert 2x EGG strings to binary [heap] section
     memcpy(heapMemory + 0, egg, 4);
     memcpy(heapMemory + 4, egg, 4);
     memcpy(heapMemory + 8, shellcode, sizeof(shellcode) + 1);

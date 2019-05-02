@@ -24,7 +24,7 @@ main()
     char stack[200];
     printf("Memory location of shellcode: %p\n", stack);
 
-    // this 2 lines inserts 2x EGG strings to binary [stack] section
+    // these 2 lines insert 2x EGG strings to binary [stack] section
     strcpy(stack, egg);
     strcpy(stack + 4, egg);
     strcpy(stack + 8, shellcode);
