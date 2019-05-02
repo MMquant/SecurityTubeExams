@@ -1,6 +1,6 @@
 ; File: egghunter_memcheck.nasm
 ; Author: Petr Javorik
-; Size:
+; Size: 50 bytes
 ; Description: rt_sigaction() x64 Linux egg hunter with memory checking
 
 global _start
@@ -49,9 +49,9 @@ next_address:
     jz next_page
 
     ; If valid memory
-    ; set EAX = egg, EDX = address_to_be_checked
+    ; set EAX = egg, EDI = pointer_to_address_to_be_checked
     ; scasd compares both registers content
-    ; if EAX == EDI then EDI+=4
+    ; if EAX == [EDI] then EDI+=4 and ZF=1
     mov eax, 0x464e464e
     mov rdi, rsi
 
